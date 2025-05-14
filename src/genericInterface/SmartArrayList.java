@@ -4,7 +4,7 @@ public class SmartArrayList<E> implements SmartList<E> {
 
     private E[] arr;
     public SmartArrayList(){
-
+        arr = (E[] ) new Object[0];
     }
     public E[] getArr() {
         return arr;
