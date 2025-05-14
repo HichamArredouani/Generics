@@ -6,13 +6,14 @@ public class Crate <T> {
     public Crate (T contents) {
         this.contents = contents;
     }
-
-    public void setContents(T contents) {
-        this.contents = contents;
-    }
     public T getContents() {
         return contents;
     }
+
+    public void ship() {
+       System.out.println("Shipping crate wiith: " + contents);
+    }
+
     @Override
     public String toString() {
         return "Crate containing: " + contents.toString();

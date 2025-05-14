@@ -3,11 +3,12 @@ package Wildcards;
 public class CrateApp {
     public static void main (String[] args) {
         WarehouseService warehouseService = new WarehouseService();
-        Crate<?> crate = warehouseService.fetchRandomCrate();
 
-        System.out.println(crate);
+        Crate<? extends Animal> animalCrate = warehouseService.fetchRandomAnimalCrate();
 
-        Object contents = crate.getContents();
-        System.out.println("Verwerkte inhoud: " + contents);
+       Animal animal = animalCrate.getContents();
+       animal.feed();
+
+       animalCrate.ship();
     }
 }
